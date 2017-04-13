@@ -6,7 +6,8 @@ ASFGameModeBase::ASFGameModeBase()
 	//HJTest = CreateDefaultSubobject<UHJTest>(TEXT("SF_HJTest"));
 	//RLTest = CreateDefaultSubobject<URLTest>(TEXT("SF_RLTest"));
 
-
+	ConstructorHelpers::FClassFinder<APawn>FP_Pawn(TEXT("/Game/Blueprints/CPP/BP_SFCharacter"));
+	DefaultPawnClass = FP_Pawn.Class;
 }
 
 void ASFGameModeBase::BeginPlay()
